@@ -48,6 +48,24 @@
                                             <segue destination="J94-Fq-51Q" kind="show" id="w77-xv-xxx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeI-9I-x8o">
+                                        <rect key="frame" x="8" y="496" width="59" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Previous">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapOnPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzo-tj-RMh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuA-nK-O6r">
+                                        <rect key="frame" x="303" y="495" width="32" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIR-rQ-qyp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -62,6 +80,8 @@
                     <connections>
                         <outlet property="backLabel" destination="kQI-sW-32x" id="dQd-b0-Nc5"/>
                         <outlet property="frontLabel" destination="AsZ-DS-daa" id="Z6f-YL-ZjM"/>
+                        <outlet property="nextButton" destination="BuA-nK-O6r" id="htC-Ma-RNV"/>
+                        <outlet property="prevButton" destination="SeI-9I-x8o" id="Pl9-bb-51R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,11 +121,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="naO-7g-QN6">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="sZf-VY-b0k">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="didTapOnCancel:" destination="jhc-bC-YbI" id="kGF-7T-r1w"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="hmE-nn-Jaj">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="didTapOnDone:" destination="jhc-bC-YbI" id="lte-Jo-6Gm"/>
                             </connections>
@@ -139,4 +161,5 @@
             <point key="canvasLocation" x="909.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
